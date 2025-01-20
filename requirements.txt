@@ -1,0 +1,6 @@
+pandas
+os
+zipfile
+streamlit
+plotly
+numpy
