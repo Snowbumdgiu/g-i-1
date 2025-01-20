@@ -77,7 +77,7 @@ output_file = 'df.csv'
 join_csv_files(parts, output_file)
 
 # Đọc lại file đã ghép vào DataFrame df_cleaned
-df_cleaned = pd.read_csv(output_file)
+df = pd.read_csv(output_file)
 # Lưu lại file CSV đã làm sạch
 df.to_csv('df.csv', index=True)
 
