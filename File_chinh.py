@@ -122,7 +122,7 @@ for file in csv_files:
 # Gộp dữ liệu các công ty thành một DataFrame lớn
 combined_df = pd.concat(all_data, ignore_index=True)
 print(f"Đọc thành công dữ liệu của {len(csv_files)} công ty với tổng số {combined_df.shape[0]} dòng.")
-
+combined_df.to_csv('combined_analysis.csv', index=False)
 
 # In[21]:
 
@@ -147,7 +147,7 @@ merged_df = merged_df.drop(columns=['Companyname','Company'])
 # Lưu file CSV mới
 merged_df.to_csv('merged_analysis.csv', index=False)
 print("File merged_analysis.csv đã được lưu thành công!")
-
+merged_df.to_csv('merged_analysis.csv', index=False)
 
 # In[22]:
 
