@@ -77,7 +77,7 @@ output_file = 'df.csv'
 join_csv_files(parts, output_file)
 
 df = pd.read_csv(
-    "output_file.",
+    "output_file",
     on_bad_lines="skip",  # Bỏ qua các dòng bị lỗi
     sep=",",
     quoting=3,
