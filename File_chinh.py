@@ -148,7 +148,6 @@ merged_df = merged_df.drop(columns=['Companyname','Company'])
 merged_df.to_csv('merged_analysis.csv', index=False)
 print("File merged_analysis.csv đã được lưu thành công!")
 merged_df.to_csv('merged_analysis.csv', index=False)
-merged_df
 # In[22]:
 
 
