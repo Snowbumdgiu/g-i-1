@@ -1,5 +1,4 @@
 pandas
-zipfile
 streamlit
 plotly
 numpy
