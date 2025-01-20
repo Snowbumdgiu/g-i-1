@@ -115,7 +115,6 @@ df = df.dropna(subset=["Date"])
 
 df["Start Date"] = pd.to_datetime(df["Start Date"], errors="coerce")
 invalid_dates = df[df["Start Date"].isna()]
-if not invalid_dates.empty:
 
 
 # In[197]:
