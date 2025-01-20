@@ -53,6 +53,11 @@ df_cleaned = pd.read_csv(output_file)
 # Lưu lại file CSV đã làm sạch
 df_cleaned.to_csv('df_cleaned.csv', index=True)
 
+# Chuyển cột "Start Date" thành kiểu datetime
+df_cleaned.loc[:, "Start Date"] = pd.to_datetime(df_cleaned["Start Date"])
+
+# Đặt "Start Date" làm index
+df_cleaned.set_index("Start Date", inplace=True)
 
 # In[43]:
 
