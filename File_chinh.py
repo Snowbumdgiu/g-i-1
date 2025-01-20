@@ -43,11 +43,15 @@ def join_csv_files(part_files, output_file):
 parts = [f'part_{i:02d}' for i in range(21)]  # Tạo danh sách từ part_00 đến part_20
 
 # Tên file CSV xuất ra
-output_file = 'df_cleaned'
+output_file = 'df_cleaned.csv'
 
 # Gọi hàm ghép file CSV
 join_csv_files(parts, output_file)
-df_cleaned.to_csv('df_cleaned.csv',index= True)
+
+# Đọc lại file đã ghép vào DataFrame df_cleaned
+df_cleaned = pd.read_csv(output_file)
+# Lưu lại file CSV đã làm sạch
+df_cleaned.to_csv('df_cleaned.csv', index=True)
 
 
 # In[43]:
