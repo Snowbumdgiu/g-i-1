@@ -76,7 +76,13 @@ output_file = 'df.csv'
 # Gọi hàm ghép file CSV
 join_csv_files(parts, output_file)
 
-df = pd.read_csv(output_file)
+df = pd.read_csv(
+    "output_file.csv",
+    on_bad_lines="skip",  # Bỏ qua các dòng bị lỗi
+    sep=",",
+    quoting=3,
+    engine="python"
+)
 # Lưu lại file CSV đã làm sạch
 df.to_csv('df.csv', index=True)
 
