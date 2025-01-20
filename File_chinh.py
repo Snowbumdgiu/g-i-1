@@ -108,9 +108,13 @@ if not invalid_categories.empty:
 # In[156]:
 
 
-df["Start Date"] = pd.to_datetime(df["Start Date"], errors="coerce")
-df["Date"] = pd.to_datetime(df["Date"])
+df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
+invalid_dates = df[df["Date"].isna()]
+print("Các giá trị không hợp lệ trong cột 'Date':")
+print(invalid_dates["Date"])
+df = df.dropna(subset=["Date"])
 
+df["Start Date"] = pd.to_datetime(df["Start Date"], errors="coerce")
 invalid_dates = df[df["Start Date"].isna()]
 if not invalid_dates.empty:
     print("Các giá trị không hợp lệ trong cột 'Start Date':")
